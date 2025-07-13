@@ -1,0 +1,377 @@
+/* Dark mode utility classes for Tailwind v4 */
+
+/* Ensure dark mode works by targeting html.dark */
+html.dark {
+  /* Base dark mode styles */
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: rgb(17 24 39) !important;
+  color: white !important;
+}
+
+/* Background colors */
+html.dark .dark\:bg-gray-900 {
+  background-color: rgb(17 24 39) !important;
+}
+
+html.dark .dark\:bg-gray-800 {
+  background-color: rgb(31 41 55) !important;
+}
+
+html.dark .dark\:bg-gray-700 {
+  background-color: rgb(55 65 81) !important;
+}
+
+html.dark .dark\:bg-gray-600 {
+  background-color: rgb(75 85 99) !important;
+}
+
+html.dark .dark\:bg-gray-500 {
+  background-color: rgb(107 114 128) !important;
+}
+
+html.dark .dark\:bg-gray-400 {
+  background-color: rgb(156 163 175) !important;
+}
+
+html.dark .dark\:bg-gray-300 {
+  background-color: rgb(209 213 219) !important;
+}
+
+html.dark .dark\:bg-gray-200 {
+  background-color: rgb(229 231 235) !important;
+}
+
+html.dark .dark\:bg-gray-100 {
+  background-color: rgb(243 244 246) !important;
+}
+
+html.dark .dark\:bg-gray-50 {
+  background-color: rgb(249 250 251) !important;
+}
+
+/* Text colors */
+html.dark .dark\:text-white {
+  color: white !important;
+}
+
+html.dark .dark\:text-gray-100 {
+  color: rgb(243 244 246) !important;
+}
+
+html.dark .dark\:text-gray-200 {
+  color: rgb(229 231 235) !important;
+}
+
+html.dark .dark\:text-gray-300 {
+  color: rgb(209 213 219) !important;
+}
+
+html.dark .dark\:text-gray-400 {
+  color: rgb(156 163 175) !important;
+}
+
+html.dark .dark\:text-gray-500 {
+  color: rgb(107 114 128) !important;
+}
+
+html.dark .dark\:text-gray-600 {
+  color: rgb(75 85 99) !important;
+}
+
+html.dark .dark\:text-gray-700 {
+  color: rgb(55 65 81) !important;
+}
+
+html.dark .dark\:text-gray-800 {
+  color: rgb(31 41 55) !important;
+}
+
+html.dark .dark\:text-gray-900 {
+  color: rgb(17 24 39) !important;
+}
+
+/* Primary colors */
+html.dark .dark\:text-primary-400 {
+  color: #f5934a !important;
+}
+
+html.dark .dark\:text-primary-500 {
+  color: #f27522 !important;
+}
+
+html.dark .dark\:text-primary-600 {
+  color: #e35a18 !important;
+}
+
+html.dark .dark\:bg-primary-400 {
+  background-color: #f5934a !important;
+}
+
+html.dark .dark\:bg-primary-500 {
+  background-color: #f27522 !important;
+}
+
+html.dark .dark\:bg-primary-600 {
+  background-color: #e35a18 !important;
+}
+
+html.dark .dark\:bg-primary-700 {
+  background-color: #bc4316 !important;
+}
+
+html.dark .dark\:bg-primary-800 {
+  background-color: #963619 !important;
+}
+
+html.dark .dark\:bg-primary-900 {
+  background-color: #792f18 !important;
+}
+
+/* Border colors */
+html.dark .dark\:border-gray-700 {
+  border-color: rgb(55 65 81) !important;
+}
+
+html.dark .dark\:border-gray-600 {
+  border-color: rgb(75 85 99) !important;
+}
+
+html.dark .dark\:border-gray-500 {
+  border-color: rgb(107 114 128) !important;
+}
+
+html.dark .dark\:border-gray-400 {
+  border-color: rgb(156 163 175) !important;
+}
+
+html.dark .dark\:border-gray-300 {
+  border-color: rgb(209 213 219) !important;
+}
+
+html.dark .dark\:border-gray-200 {
+  border-color: rgb(229 231 235) !important;
+}
+
+/* Hover states */
+html.dark .dark\:hover\:text-primary-400:hover {
+  color: #f5934a !important;
+}
+
+html.dark .dark\:hover\:text-primary-500:hover {
+  color: #f27522 !important;
+}
+
+html.dark .dark\:hover\:text-primary-600:hover {
+  color: #e35a18 !important;
+}
+
+html.dark .dark\:hover\:bg-primary-400:hover {
+  background-color: #f5934a !important;
+}
+
+html.dark .dark\:hover\:bg-primary-500:hover {
+  background-color: #f27522 !important;
+}
+
+html.dark .dark\:hover\:bg-primary-600:hover {
+  background-color: #e35a18 !important;
+}
+
+html.dark .dark\:hover\:bg-primary-700:hover {
+  background-color: #bc4316 !important;
+}
+
+html.dark .dark\:hover\:bg-primary-800:hover {
+  background-color: #963619 !important;
+}
+
+html.dark .dark\:hover\:bg-primary-900:hover {
+  background-color: #792f18 !important;
+}
+
+html.dark .dark\:hover\:bg-gray-800:hover {
+  background-color: rgb(31 41 55) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-700:hover {
+  background-color: rgb(55 65 81) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-600:hover {
+  background-color: rgb(75 85 99) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-500:hover {
+  background-color: rgb(107 114 128) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-400:hover {
+  background-color: rgb(156 163 175) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-300:hover {
+  background-color: rgb(209 213 219) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-200:hover {
+  background-color: rgb(229 231 235) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-100:hover {
+  background-color: rgb(243 244 246) !important;
+}
+
+html.dark .dark\:hover\:bg-gray-50:hover {
+  background-color: rgb(249 250 251) !important;
+}
+
+/* Background opacity */
+html.dark .dark\:bg-gray-900\/80 {
+  background-color: rgba(17, 24, 39, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-800\/80 {
+  background-color: rgba(31, 41, 55, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-700\/80 {
+  background-color: rgba(55, 65, 81, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-600\/80 {
+  background-color: rgba(75, 85, 99, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-500\/80 {
+  background-color: rgba(107, 114, 128, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-400\/80 {
+  background-color: rgba(156, 163, 175, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-300\/80 {
+  background-color: rgba(209, 213, 219, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-200\/80 {
+  background-color: rgba(229, 231, 235, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-100\/80 {
+  background-color: rgba(243, 244, 246, 0.8) !important;
+}
+
+html.dark .dark\:bg-gray-50\/80 {
+  background-color: rgba(249, 250, 251, 0.8) !important;
+}
+
+/* Primary background opacity */
+html.dark .dark\:bg-primary-900\/20 {
+  background-color: rgba(121, 47, 24, 0.2) !important;
+}
+
+html.dark .dark\:bg-primary-800\/20 {
+  background-color: rgba(150, 54, 25, 0.2) !important;
+}
+
+html.dark .dark\:bg-primary-700\/20 {
+  background-color: rgba(188, 67, 22, 0.2) !important;
+}
+
+html.dark .dark\:bg-primary-600\/20 {
+  background-color: rgba(227, 90, 24, 0.2) !important;
+}
+
+html.dark .dark\:bg-primary-500\/20 {
+  background-color: rgba(242, 117, 34, 0.2) !important;
+}
+
+html.dark .dark\:bg-primary-400\/20 {
+  background-color: rgba(245, 147, 74, 0.2) !important;
+}
+
+/* Display utilities */
+html.dark .dark\:hidden {
+  display: none !important;
+}
+
+html.dark .dark\:block {
+  display: block !important;
+}
+
+html.dark .dark\:flex {
+  display: flex !important;
+}
+
+html.dark .dark\:inline-flex {
+  display: inline-flex !important;
+}
+
+html.dark .dark\:grid {
+  display: grid !important;
+}
+
+html.dark .dark\:inline-grid {
+  display: inline-grid !important;
+}
+
+/* Responsive utilities */
+@media (min-width: 640px) {
+  html.dark .dark\:sm\:hidden {
+    display: none !important;
+  }
+  
+  html.dark .dark\:sm\:block {
+    display: block !important;
+  }
+  
+  html.dark .dark\:sm\:flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 768px) {
+  html.dark .dark\:md\:hidden {
+    display: none !important;
+  }
+  
+  html.dark .dark\:md\:block {
+    display: block !important;
+  }
+  
+  html.dark .dark\:md\:flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  html.dark .dark\:lg\:hidden {
+    display: none !important;
+  }
+  
+  html.dark .dark\:lg\:block {
+    display: block !important;
+  }
+  
+  html.dark .dark\:lg\:flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  html.dark .dark\:xl\:hidden {
+    display: none !important;
+  }
+  
+  html.dark .dark\:xl\:block {
+    display: block !important;
+  }
+  
+  html.dark .dark\:xl\:flex {
+    display: flex !important;
+  }
+} 

@@ -1,11 +1,236 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <!-- Hero Section -->
+  <section id="inicio" class="relative bg-gradient-to-br from-primary-50 to-orange-50 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32 overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-20 h-20 bg-primary-300 rounded-full"></div>
+      <div class="absolute top-40 right-20 w-16 h-16 bg-primary-400 rounded-full"></div>
+      <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-primary-500 rounded-full"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+              Descubre los
+              <span class="text-primary-600 dark:text-primary-400">Secretos</span>
+              de la Cocina Italiana
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+              Aprende a crear platos auténticos que harán que tu familia y amigos se sientan como en Italia. 
+              Desde pasta fresca hasta tiramisú, domina las técnicas tradicionales paso a paso.
+            </p>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a 
+              href="#curso" 
+              class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50"
+            >
+              Comenzar Ahora
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <a 
+              href="#beneficios" 
+              class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50"
+            >
+              Ver Beneficios
+            </a>
+          </div>
+          
+          <!-- Trust indicators -->
+          <div class="flex items-center space-x-6 pt-4">
+            <div class="flex items-center space-x-2">
+              <div class="flex -space-x-1">
+                <div class="w-8 h-8 bg-primary-200 rounded-full border-2 border-white dark:border-gray-800"></div>
+                <div class="w-8 h-8 bg-primary-300 rounded-full border-2 border-white dark:border-gray-800"></div>
+                <div class="w-8 h-8 bg-primary-400 rounded-full border-2 border-white dark:border-gray-800"></div>
+              </div>
+              <span class="text-sm text-gray-600 dark:text-gray-400">+500 estudiantes</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <div class="flex text-yellow-400">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 dark:text-gray-400">4.9/5</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="relative">
+          <div class="relative z-10 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div class="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-xl flex items-center justify-center">
+              <svg class="w-32 h-32 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Pasta Fresca</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Hecha a mano</p>
+            </div>
+          </div>
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-200 dark:bg-primary-800 rounded-full opacity-50"></div>
+          <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-primary-300 dark:bg-primary-700 rounded-full opacity-50"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="beneficios" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          ¿Por qué elegir nuestro curso?
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Diseñado específicamente para principiantes, nuestro curso te llevará desde los conceptos básicos hasta crear platos dignos de un restaurante italiano.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 hover:shadow-lg">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300">
+            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Contenido Completo
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Más de 50 lecciones en video HD, desde técnicas básicas hasta recetas avanzadas. Incluye pasta fresca, salsas tradicionales, risottos y postres.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 hover:shadow-lg">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300">
+            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Aprendizaje Visual
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Videos paso a paso con explicaciones detalladas. Cada técnica se muestra desde múltiples ángulos para que no te pierdas ningún detalle.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 hover:shadow-lg">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300">
+            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Acceso de por Vida
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Una vez que te inscribas, tendrás acceso ilimitado a todo el contenido. Aprende a tu ritmo y repasa las lecciones cuando quieras.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 hover:shadow-lg">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300">
+            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Comunidad Activa
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Únete a nuestra comunidad de estudiantes. Comparte tus creaciones, haz preguntas y recibe feedback de otros amantes de la cocina italiana.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 hover:shadow-lg">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300">
+            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Garantía de Satisfacción
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Si no estás completamente satisfecho con el curso en los primeros 30 días, te devolvemos tu dinero sin preguntas.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 hover:shadow-lg">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300">
+            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Aprendizaje Flexible
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Estudia cuando y donde quieras. El contenido está disponible 24/7 en cualquier dispositivo con conexión a internet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="curso" class="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        ¿Listo para comenzar tu aventura culinaria?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
+        Únete a miles de estudiantes que ya han transformado su cocina con nuestras técnicas italianas auténticas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="#contacto" 
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 hover:bg-gray-100 font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
+        >
+          Inscribirse Ahora
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+        <a 
+          href="#contacto" 
+          class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
+        >
+          Ver Demo Gratis
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,171 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/globals.css';
+import '../styles/dark-mode.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'Cucina Italiana - Aprende Cocina Italiana Auténtica',
+  description = 'Descubre los secretos de la cocina italiana tradicional. Aprende a crear platos auténticos con nuestro curso completo para principiantes.',
+  image = '/og-image.jpg',
+  canonical = Astro.url.href,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:site_name" content="Cucina Italiana" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Cucina Italiana" />
+    <meta name="keywords" content="cocina italiana, recetas italianas, pasta, pizza, risotto, tiramisú, curso de cocina, aprender a cocinar" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#f27522" />
+    <meta name="msapplication-TileColor" content="#f27522" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Cucina Italiana - Curso Completo de Cocina Italiana",
+        "description": "Aprende los secretos de la cocina italiana tradicional con nuestro curso completo para principiantes.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Cucina Italiana",
+          "url": "https://cucina-italiana.com"
+        },
+        "courseMode": "online",
+        "educationalLevel": "beginner",
+        "inLanguage": "es",
+        "teaches": "cocina italiana, recetas tradicionales, técnicas culinarias"
+      }
+    </script>
+  </head>
+  
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <div class="min-h-screen flex flex-col">
+      <Header />
+      
+      <main class="flex-grow">
+        <slot />
+      </main>
+      
+      <Footer />
+    </div>
+    
+    <!-- Theme initialization script -->
+    <script>
+      // Initialize theme immediately to prevent flash
+      (function() {
+        const savedTheme = localStorage.getItem('color-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        console.log('Layout theme init - saved:', savedTheme, 'prefers:', prefersDark);
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+          console.log('Added dark class');
+        } else {
+          document.documentElement.classList.remove('dark');
+          console.log('Removed dark class');
+        }
+      })();
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+  
+  /* Dark mode scrollbar */
+  .dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+  }
+  
+  /* Smooth transitions for all elements */
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid #f27522;
+    outline-offset: 2px;
+  }
+  
+  /* Remove focus outline for mouse users */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+</style> 
